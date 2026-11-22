@@ -5,7 +5,6 @@ payload:
   - 'DOMAIN-SUFFIX,lan'
   - 'DOMAIN-SUFFIX,home.arpa'
   - 'GEOSITE,private'
-  - 'GEOIP,LAN,no-resolve'
 
   # Chinese public DNS endpoints used for direct resolution.
   - 'DOMAIN-SUFFIX,alidns.com'

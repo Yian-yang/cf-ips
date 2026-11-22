@@ -1,16 +1,18 @@
-payload:
+
+rules:
   # Local names and private network destinations.
-  - 'DOMAIN-SUFFIX,localhost'
-  - 'DOMAIN-SUFFIX,local'
-  - 'DOMAIN-SUFFIX,lan'
-  - 'DOMAIN-SUFFIX,home.arpa'
-  - 'GEOSITE,private'
+  - 'DOMAIN-SUFFIX,localhost,DIRECT'
+  - 'DOMAIN-SUFFIX,local,DIRECT'
+  - 'DOMAIN-SUFFIX,lan,DIRECT'
+  - 'DOMAIN-SUFFIX,home.arpa,DIRECT'
+  - 'GEOSITE,private,DIRECT'
+  - 'GEOIP,LAN,DIRECT,no-resolve'
 
-  # Chinese public DNS endpoints used for direct resolution.
-  - 'DOMAIN-SUFFIX,alidns.com'
-  - 'DOMAIN,doh.pub'
-  - 'DOMAIN,dot.pub'
+  # Chinese public DNS endpoints.
+  - 'DOMAIN-SUFFIX,alidns.com,DIRECT'
+  - 'DOMAIN,doh.pub,DIRECT'
+  - 'DOMAIN,dot.pub,DIRECT'
 
-  # Domain classification first, then IP classification for unmatched hosts.
-  - 'GEOSITE,CN'
-  - 'GEOIP,CN'
+  # Domain classification first, then IP classification.
+  - 'GEOSITE,CN,DIRECT'
+  - 'GEOIP,CN,DIRECT'

@@ -1,0 +1,17 @@
+payload:
+  # Local names and private network destinations.
+  - 'DOMAIN-SUFFIX,localhost'
+  - 'DOMAIN-SUFFIX,local'
+  - 'DOMAIN-SUFFIX,lan'
+  - 'DOMAIN-SUFFIX,home.arpa'
+  - 'GEOSITE,private'
+  - 'GEOIP,LAN,no-resolve'
+
+  # Chinese public DNS endpoints used for direct resolution.
+  - 'DOMAIN-SUFFIX,alidns.com'
+  - 'DOMAIN,doh.pub'
+  - 'DOMAIN,dot.pub'
+
+  # Domain classification first, then IP classification for unmatched hosts.
+  - 'GEOSITE,CN'
+  - 'GEOIP,CN'
